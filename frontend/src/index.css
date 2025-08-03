@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* EduKosh Design System - Growth & Learning Theme */
+    --background: 120 20% 98%;
+    --foreground: 150 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 15% 15%;
+
+    /* Pastel Green Primary - Growth & Nature */
+    --primary: 140 45% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 140 35% 85%;
+    --primary-glow: 140 55% 75%;
+
+    /* Soft Lavender Secondary */
+    --secondary: 260 35% 85%;
+    --secondary-foreground: 260 15% 25%;
+
+    /* Sky Blue Accent */
+    --accent: 200 65% 75%;
+    --accent-foreground: 200 25% 15%;
+
+    --muted: 120 15% 95%;
+    --muted-foreground: 150 10% 45%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 120 20% 90%;
+    --input: 120 15% 94%;
+    --ring: 140 45% 65%;
+
+    /* Growth-inspired gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-light)), hsl(var(--accent)) 50%, hsl(var(--secondary)));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.8), hsl(var(--primary-light) / 0.3));
+    
+    /* Elegant shadows */
+    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);
+    --shadow-grow: 0 8px 40px hsl(var(--primary) / 0.2);
+    --shadow-focus: 0 0 0 3px hsl(var(--primary) / 0.3);
+
+    /* Plant growth animations */
+    --transition-grow: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with deep nature tones */
+    --background: 150 25% 8%;
+    --foreground: 120 15% 92%;
+
+    --card: 150 20% 12%;
+    --card-foreground: 120 15% 92%;
+
+    --popover: 150 20% 12%;
+    --popover-foreground: 120 15% 92%;
+
+    --primary: 140 50% 70%;
+    --primary-foreground: 150 25% 8%;
+    --primary-light: 140 40% 60%;
+    --primary-glow: 140 60% 80%;
+
+    --secondary: 260 25% 25%;
+    --secondary-foreground: 260 15% 85%;
+
+    --accent: 200 55% 65%;
+    --accent-foreground: 200 25% 15%;
+
+    --muted: 150 15% 15%;
+    --muted-foreground: 120 10% 65%;
+
+    --destructive: 0 75% 65%;
+    --destructive-foreground: 150 25% 8%;
+
+    --border: 150 15% 20%;
+    --input: 150 15% 18%;
+    --ring: 140 50% 70%;
+
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(var(--primary-light)) 50%, hsl(var(--accent)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card) / 0.8), hsl(var(--primary) / 0.1));
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
